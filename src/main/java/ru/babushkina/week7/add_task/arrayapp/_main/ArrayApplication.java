@@ -105,45 +105,4 @@ public class ArrayApplication {
         }
         return result;
     }
-
-
-//    public static void evenNums() {
-//        int[] arr = new int[10];
-//        for (int i = 0; i < arr.length; i++) {
-//            arr[i] = (int) (Math.random() * 10);
-//        }
-//
-//        for (int i = 0; i < arr.length; i++) {
-//           // System.out.print(" " + arr[i]);
-//        }
-//        int evenNums = 0;
-//        for (int i = 0; i < arr[i]; i++) {
-//            if (arr[i] % 2 == 0) {
-//                evenNums++;
-//            }
-//        }
-//        System.out.println(evenNums);
-//    }
-//
-//
-//    public static void sumArray() {
-//        int[] arr1 = new int[10];
-//        for (int i = 0; i < arr1.length; i++) {
-//            arr1[i] = (int) (Math.random() * 10);
-//        }
-//
-//        for (int i = 0; i < arr1.length; i++) {
-//            System.out.print(" " + arr1[i]);
-//        }
-//
-//        int result = 0;
-//        for (int i = 0; i < arr1.length; i++) {
-//            result += arr1[i];
-//        }
-//        System.out.println("");
-//        System.out.println(result);
-//
-//    }
-
-
 }
