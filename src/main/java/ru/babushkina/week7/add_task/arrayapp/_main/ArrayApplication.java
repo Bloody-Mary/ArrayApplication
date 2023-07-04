@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class ArrayApplication {
     public static void main(String[] args) {
         int[] arr = generateArray();
-
         String arrayAsString = Arrays.toString(arr);
         int evenNumbersCount = countEvenNumbs(arr);
         int oddNumbersCount = countOddNumbs(arr);
