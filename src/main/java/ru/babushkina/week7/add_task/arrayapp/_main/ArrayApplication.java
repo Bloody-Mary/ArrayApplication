@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class ArrayApplication {
     public static void main(String[] args) {
         int[] arr = generateArray();
+
         String arrayAsString = Arrays.toString(arr);
         int evenNumbersCount = countEvenNumbs(arr);
         int oddNumbersCount = countOddNumbs(arr);
@@ -24,6 +25,7 @@ public class ArrayApplication {
 
     public static int[] generateArray() {
         int[] arr = new int[10];
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 21) - 10;
         }
@@ -32,6 +34,7 @@ public class ArrayApplication {
 
     public static int countEvenNumbs(int[] arr) {
         int result = 0;
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
                 result++;
@@ -42,6 +45,7 @@ public class ArrayApplication {
 
     public static int countOddNumbs(int[] arr) {
         int result = 0;
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 != 0) {
                 result++;
@@ -64,7 +68,8 @@ public class ArrayApplication {
 
    public static int sumPrimeNumbs(int[] arr) {
         int result = 0;
-       for (int i = 0; i < arr.length; i++) {
+
+        for (int i = 0; i < arr.length; i++) {
            if (isPrimeNumber(arr[i])) {
                result++;
            }
@@ -74,6 +79,7 @@ public class ArrayApplication {
 
     public static int sumArray(int[] arr) {
         int result = 0;
+
         for (int i = 0; i < arr.length; i++) {
             result += arr[i];
         }
