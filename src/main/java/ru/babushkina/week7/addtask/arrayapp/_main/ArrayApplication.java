@@ -1,4 +1,4 @@
-package ru.babushkina.week7.add_task.arrayapp._main;
+package ru.babushkina.week7.addtask.arrayapp._main;
 
 import java.util.Arrays;
 
@@ -8,11 +8,10 @@ public class ArrayApplication {
         String arrayAsString = Arrays.toString(arr);
         int evenNumbersCount = countEvenNumbs(arr);
         int oddNumbersCount = countOddNumbs(arr);
-        int primeNumbersSum = sumPrimeNumbs(arr);
+        int primeNumbersSum = amountPrimeNumbs(arr);
         int summedArray = sumArray(arr);
         int diffIndexNumbers = indexNumbsDiff(arr);
         int summedIndexZero = sumIndexZero(arr);
-
         System.out.println(arrayAsString);
         System.out.println(evenNumbersCount);
         System.out.println(oddNumbersCount);
@@ -24,7 +23,6 @@ public class ArrayApplication {
 
     public static int[] generateArray() {
         int[] arr = new int[10];
-
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 21) - 10;
         }
@@ -33,7 +31,6 @@ public class ArrayApplication {
 
     public static int countEvenNumbs(int[] arr) {
         int result = 0;
-
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 == 0) {
                 result++;
@@ -44,7 +41,6 @@ public class ArrayApplication {
 
     public static int countOddNumbs(int[] arr) {
         int result = 0;
-
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] % 2 != 0) {
                 result++;
@@ -53,32 +49,18 @@ public class ArrayApplication {
         return result;
     }
 
-    public static boolean isPrimeNumber(int number) {
-        if (number <= 1) {
-            return false;
-        }
-        for (int i = 2; i * i <= number; i++) {
-            if (number % i == 0) {
-                return false;
+    public static int amountPrimeNumbs(int[] arr) {
+        int result = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (isPrimeNumber(arr[i])) {
+                result++;
             }
         }
-        return true;
-   }
-
-   public static int sumPrimeNumbs(int[] arr) {
-        int result = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-           if (isPrimeNumber(arr[i])) {
-               result++;
-           }
-       }
-       return result;
-   }
+        return result;
+    }
 
     public static int sumArray(int[] arr) {
         int result = 0;
-
         for (int i = 0; i < arr.length; i++) {
             result += arr[i];
         }
@@ -88,7 +70,6 @@ public class ArrayApplication {
     public static int indexNumbsDiff(int[] arr) {
         int evenSum = 0;
         int oddSum = 0;
-
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
                 evenSum += arr[i];
@@ -96,18 +77,29 @@ public class ArrayApplication {
                 oddSum += arr[i];
             }
         }
-
         return evenSum - oddSum;
     }
 
     public static int sumIndexZero(int[] arr) {
         int result = 0;
-
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 result++;
             }
         }
         return result;
+    }
+
+    private static boolean isPrimeNumber(int number) {
+        boolean isPrime = false;
+        if (number > 1) {
+            isPrime = true;
+            for (int i = 2; i * i <= number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                }
+            }
+        }
+        return isPrime;
     }
 }

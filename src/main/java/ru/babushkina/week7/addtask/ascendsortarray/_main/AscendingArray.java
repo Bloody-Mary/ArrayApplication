@@ -1,4 +1,4 @@
-package ru.babushkina.week7.add_task.ascendsortarray._main;
+package ru.babushkina.week7.addtask.ascendsortarray._main;
 
 import java.util.Arrays;
 
@@ -7,14 +7,12 @@ public class AscendingArray {
         int[] arr = generateArray();
         String arrayAsString = Arrays.toString(arr);
         int[] sortArray = sortedArray(arr);
-
         System.out.println(arrayAsString);
         System.out.println(Arrays.toString(sortArray));
     }
 
     public static int[] generateArray() {
         int[] array = new int[4];
-
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 21) - 10;
         }
