@@ -1,4 +1,4 @@
-package ru.babushkina.week7.homework;
+package ru.babushkina.week7.homework.task1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
